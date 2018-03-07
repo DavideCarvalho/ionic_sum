@@ -1,8 +1,12 @@
-angular.module("starter").controller("PrincipalController", function($state) {
-  var vm = this;
+angular.module("starter").controller("PrincipalController", principalController);
+
+function principalController(serviceNumeros) {
+  const vm = this;
   vm.resultado = '';
   vm.somaDoisNumeros = somaDoisNumeros;
   function somaDoisNumeros(numeroUm, numeroDois) {
-    vm.resultado = parseInt(numeroUm) + parseInt(numeroDois);
+    vm.resultado = serviceNumeros.somaDoisNumeros(numeroUm, numeroDois);
   }
-});
+}
+
+principalController.$inject = ['serviceNumeros'];
