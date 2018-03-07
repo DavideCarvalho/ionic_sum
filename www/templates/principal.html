@@ -1,0 +1,24 @@
+<ion-view>
+  <ion-header-bar class="title">
+    <h1 class="centered">Login</h1>
+  </ion-header-bar>
+  <ion-content>
+    <form ng-submit="principal.somaDoisNumeros(principal.numeroUm, principal.numeroDois)">
+      <div class="list">
+        <label class="item item-input item-floating-label">
+          <span class="input-label">First Name</span>
+          <input type="number" ng-model='principal.numeroUm' placeholder="Primeiro número">
+        </label>
+        <label class="item item-input item-floating-label">
+          <span class="input-label">Last Name</span>
+          <input type="number" ng-model='principal.numeroDois' placeholder="Segundo número">
+        </label>
+        <label class="item item-input item-floating-label">
+          <span class="input-label">Resultado</span>
+          <input type="number" readonly ng-model="principal.resultado" placeholder="Resultado">
+        </label>
+        <button class="button button-block button-positive" type="submit">Entrar</button>
+      </div>
+    </form>
+  </ion-content>
+</ion-view>
